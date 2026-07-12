@@ -247,25 +247,7 @@ npm run dev
 
 ---
 
-# 📷 Screenshots
 
-> Add your screenshots here
-
-```
-Home Feed
-
-Profile
-
-Explore
-
-Chat
-
-Notifications
-
-Mobile View
-```
-
----
 
 # 📈 Future Improvements
 
@@ -364,11 +346,6 @@ AI & ML Learner
 
 ---
 
-# 📄 License
-
-This project is licensed under the MIT License.
-
----
 
 <div align="center">
 
