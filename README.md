@@ -182,11 +182,11 @@ GX-SOCIAL/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/gx-social.git
+git clone https://github.com/9autam-chavda/Gx-social-media.git
 ```
 
 ```bash
-cd gx-social
+cd Gx-social-media
 ```
 
 ---
@@ -288,33 +288,6 @@ npm run dev
 - Context API State Management
 - Modular Backend Architecture
 - Reusable Components
-
----
-
-# 🤝 Contributing
-
-Contributions are always welcome.
-
-1. Fork the project
-2. Create your feature branch
-
-```bash
-git checkout -b feature/AmazingFeature
-```
-
-3. Commit your changes
-
-```bash
-git commit -m "Add AmazingFeature"
-```
-
-4. Push
-
-```bash
-git push origin feature/AmazingFeature
-```
-
-5. Open a Pull Request
 
 ---
 
