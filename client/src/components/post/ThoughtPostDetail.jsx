@@ -30,8 +30,8 @@ const ThoughtPostDetail = ({
     post?.author || post?.user;
 
   const authorPath = author?.username
-    ? `/profile/${author.username}`
-    : '/feed';
+    ? `/app/profile/${author.username}`
+    : '/app/feed';
 
   const [commentText, setCommentText] =
     useState('');

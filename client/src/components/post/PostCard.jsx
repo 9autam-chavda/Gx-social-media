@@ -38,8 +38,8 @@ const PostCard = ({
 
   const authorPath =
     authorUsername
-      ? `/profile/${authorUsername}`
-      : '/feed';
+      ? `/app/profile/${authorUsername}`
+      : '/app/feed';
 
   const syncPost = (
     updater

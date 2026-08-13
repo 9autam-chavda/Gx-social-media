@@ -13,12 +13,12 @@ const actionClassName = ({ isActive }) =>
 
 const Navbar = () => {
   const { user, unreadNotifications, logout } = useAuth();
-  const profilePath = user?.username ? `/profile/${user.username}` : '/feed';
+  const profilePath = user?.username ? `/app/profile/${user.username}` : '/app/feed';
 
   return (
     <header className="sticky top-0 z-30 border-b border-line/80 bg-white/95 px-3 py-2.5 shadow-sm backdrop-blur-xl sm:px-4 lg:px-6">
       <div className="mx-auto flex max-w-[1480px] items-center justify-between gap-3">
-        <NavLink className="flex items-center gap-3 text-xl font-black tracking-normal text-ink" to="/feed">
+        <NavLink className="flex items-center gap-3 text-xl font-black tracking-normal text-ink" to="/app/feed">
           <img src="/gx.png" alt="Gx Logo" className="h-9 w-9 rounded-xl object-contain sm:h-10 sm:w-10" />
           <span>GX</span>
         </NavLink>
@@ -28,7 +28,7 @@ const Navbar = () => {
             <p className="truncate text-sm font-black leading-5 text-ink">@{user?.username}</p>
             <p className="truncate text-xs font-semibold leading-4 text-ink-muted">Logged in</p>
           </div>
-          <NavLink className={actionClassName} to="/notifications" aria-label="Notifications">
+          <NavLink className={actionClassName} to="/app/notifications" aria-label="Notifications">
             {({ isActive }) => (
               <span className="relative grid h-5 w-5 place-items-center">
                 <Icon name={isActive ? 'notificationActive' : 'notification'} size={20} />

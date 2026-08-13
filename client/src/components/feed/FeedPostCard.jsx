@@ -14,7 +14,7 @@ const FeedPostCard = ({ post, onPostChange }) => {
   const currentUserId = user?.id || user?._id;
   const authorUsername =
     post?.user?.username || post?.author?.username || post?.createdBy?.username;
-  const authorPath = authorUsername ? `/profile/${authorUsername}` : '/feed';
+  const authorPath = authorUsername ? `/app/profile/${authorUsername}` : '/app/feed';
 
   const syncPost = (updater) => {
     onPostChange?.(postId, updater);

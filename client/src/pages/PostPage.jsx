@@ -17,7 +17,7 @@ const PostPage = () => {
 
   useEffect(() => {
     if (!postId) {
-      navigate('/feed', { replace: true });
+      navigate('/app/feed', { replace: true });
     }
   }, [postId, navigate]);
 

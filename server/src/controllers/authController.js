@@ -1,4 +1,4 @@
-const { registerUser, authenticateUser, getCurrentUser } = require('../services/authService');
+const { registerUser, authenticateUser, getCurrentUser, resetPasswordByEmail } = require('../services/authService');
 const ApiResponse = require('../utils/ApiResponse');
 
 exports.register = async (req, res) => {
@@ -18,4 +18,9 @@ exports.getMe = async (req, res) => {
 
 exports.logout = async (req, res) => {
   return ApiResponse.success('Logout successful').send(res);
+};
+
+exports.forgotPassword = async (req, res) => {
+  await resetPasswordByEmail(req.body);
+  return ApiResponse.success('Password updated successfully. Please log in with your new password.').send(res);
 };

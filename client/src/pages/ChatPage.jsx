@@ -238,12 +238,12 @@ const ChatPage = () => {
 
   const handleSelectConversation = (conversation) => {
     setActiveConversation(conversation);
-    navigate(`/messages/${getConversationId(conversation)}`);
+    navigate(`/app/messages/${getConversationId(conversation)}`);
   };
 
   const handleBack = () => {
     setActiveConversation(null);
-    navigate('/messages');
+    navigate('/app/messages');
   };
 
   const handleStartConversation = async (participant) => {

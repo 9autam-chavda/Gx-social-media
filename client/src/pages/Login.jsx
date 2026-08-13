@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import Icon from '../components/icons/Icon';
 import AuthShell from '../components/auth/AuthShell';
 import { useAuth } from '../hooks/useAuth';
@@ -7,6 +7,7 @@ import { getErrorMessage } from '../utils/api';
 
 const Login = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { login, isAuthenticated } = useAuth();
   const [formData, setFormData] = useState({
     email: '',
@@ -16,7 +17,7 @@ const Login = () => {
   const [submitting, setSubmitting] = useState(false);
 
   if (isAuthenticated) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/app" replace />;
   }
 
   const handleChange = (event) => {
@@ -31,7 +32,7 @@ const Login = () => {
 
     try {
       await login(formData);
-      navigate('/');
+      navigate(location.state?.from?.pathname || '/app', { replace: true });
     } catch (err) {
       setError(getErrorMessage(err, 'Login failed'));
     } finally {
@@ -80,6 +81,7 @@ const Login = () => {
               required
             />
         </label>
+        <Link className="-mt-1 text-right text-sm font-bold text-brand hover:text-blue-800" to="/forgot-password">Forgot password?</Link>
 
         <button className="primary-button mt-2 w-full" type="submit" disabled={submitting}>
           {submitting ? 'Logging in...' : 'Login'}

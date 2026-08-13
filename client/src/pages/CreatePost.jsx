@@ -119,7 +119,7 @@ const CreatePost = () => {
       });
 
       setToast('Post created');
-      setTimeout(() => navigate('/feed'), 650);
+      setTimeout(() => navigate('/app/feed'), 650);
     } catch (err) {
       setError(getErrorMessage(err, 'Unable to create post'));
     } finally {

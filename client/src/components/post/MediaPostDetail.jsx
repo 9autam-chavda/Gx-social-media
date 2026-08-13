@@ -46,8 +46,8 @@ const MediaPostDetail = ({
     post?.author || post?.user;
 
   const authorPath = author?.username
-    ? `/profile/${author.username}`
-    : '/feed';
+    ? `/app/profile/${author.username}`
+    : '/app/feed';
 
   const commentCount = useMemo(
     () =>

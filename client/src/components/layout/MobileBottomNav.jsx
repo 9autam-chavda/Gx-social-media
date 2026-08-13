@@ -4,7 +4,7 @@ import { useAuth } from '../../hooks/useAuth';
 
 const MobileBottomNav = () => {
   const { user } = useAuth();
-  const navItems = [...mobileBottomNavItems, getProfileNavItem(user?.username ? `/profile/${user.username}` : '/feed')];
+  const navItems = [...mobileBottomNavItems, getProfileNavItem(user?.username ? `/app/profile/${user.username}` : '/app/feed')];
 
   return (
     <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-line/80 bg-white/95 px-2 pb-[calc(0.375rem+env(safe-area-inset-bottom))] pt-1.5 shadow-[0_-8px_22px_rgba(15,23,42,0.06)] backdrop-blur-xl lg:hidden">

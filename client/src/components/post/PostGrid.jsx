@@ -50,7 +50,7 @@ const PostGrid = ({
         return (
           <Link
             key={getId(post)}
-            to={`/post/${getId(post)}`}
+            to={`/app/post/${getId(post)}`}
             className="
               group relative aspect-square
               overflow-hidden rounded-2xl sm:rounded-[1.7rem]

@@ -13,12 +13,12 @@ const navClass = ({ isActive }) =>
 
 const Sidebar = () => {
   const { user, logout } = useAuth();
-  const profilePath = user?.username ? `/profile/${user.username}` : '/feed';
+  const profilePath = user?.username ? `/app/profile/${user.username}` : '/app/feed';
   const navItems = [...desktopSidebarNavItems, getProfileNavItem(profilePath)];
 
   return (
     <aside className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col bg-[#1E293B] px-4 py-5 text-white shadow-[8px_0_28px_rgba(15,23,42,0.08)] lg:flex">
-      <NavLink className="mb-6 flex shrink-0 items-center gap-3 rounded-xl px-2 py-1 text-xl font-black tracking-normal text-white" to="/feed">
+      <NavLink className="mb-6 flex shrink-0 items-center gap-3 rounded-xl px-2 py-1 text-xl font-black tracking-normal text-white" to="/app/feed">
         <img src="/gx.png" alt="Gx Logo" className="h-9 w-9 rounded-lg bg-white object-contain p-1" />
         <span>GX</span>
       </NavLink>

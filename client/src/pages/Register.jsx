@@ -17,7 +17,7 @@ const Register = () => {
   const [submitting, setSubmitting] = useState(false);
 
   if (isAuthenticated) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/app" replace />;
   }
 
   const handleChange = (event) => {
@@ -32,7 +32,7 @@ const Register = () => {
 
     try {
       await register(formData);
-      navigate('/');
+      navigate('/app', { replace: true });
     } catch (err) {
       setError(getErrorMessage(err, 'Registration failed'));
     } finally {

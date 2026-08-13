@@ -194,7 +194,7 @@ const PostImage = ({
 
   return (
     <Link
-      to={`/post/${post._id}`}
+      to={`/app/post/${post._id}`}
       state={{
         backgroundLocation: location,
         background: location,

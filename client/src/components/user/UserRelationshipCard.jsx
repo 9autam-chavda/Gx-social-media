@@ -30,7 +30,7 @@ const UserRelationshipCard = memo(
         "
       >
         <Link
-          to={`/profile/${user?.username || userId}`}
+          to={`/app/profile/${user?.username || userId}`}
           className="flex min-w-0 flex-1 items-center gap-3"
         >
           <Avatar

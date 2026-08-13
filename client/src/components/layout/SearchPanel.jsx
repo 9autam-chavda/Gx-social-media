@@ -231,7 +231,7 @@ const SearchPanel = ({ mode = 'sidebar', onClose }) => {
                         className="flex items-center gap-3 rounded-xl px-3 py-2.5 transition-colors duration-150 hover:bg-surface-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                         key={user._id}
                         onClick={() => handleSelectTerm(user.username || query)}
-                        to={`/profile/${user.username}`}
+                        to={`/app/profile/${user.username}`}
                       >
                         <Avatar user={user} size="sm" />
                         <p className="min-w-0 truncate text-sm font-black text-ink">@{user.username}</p>
@@ -250,7 +250,7 @@ const SearchPanel = ({ mode = 'sidebar', onClose }) => {
                         className="flex items-center gap-3 rounded-xl px-3 py-2.5 transition-colors duration-150 hover:bg-surface-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                         key={post._id}
                         onClick={() => handleSelectTerm(post.caption || post.textContent || query)}
-                        to={`/post/${post._id}`}
+                        to={`/app/post/${post._id}`}
                       >
                         <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-soft text-brand">
                           <Icon name="hashtag" />

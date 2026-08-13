@@ -4,7 +4,7 @@ import Navbar from '../components/layout/Navbar';
 import Sidebar from '../components/layout/Sidebar';
 
 const getMainClassName = (pathname) => {
-  const isMessages = pathname.startsWith('/messages');
+  const isMessages = pathname.startsWith('/app/messages');
 
   return [
     'min-w-0 flex-1 pb-20 lg:pb-6',

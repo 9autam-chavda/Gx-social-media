@@ -63,8 +63,8 @@ const NotificationList = ({ notifications = [], onMarkRead }) => {
     const sender = notification.sender || {};
     const targetPath =
       notification.type === 'follow'
-        ? `/profile/${sender.username}`
-        : `/post/${notification.post?._id}`;
+        ? `/app/profile/${sender.username}`
+        : `/app/post/${notification.post?._id}`;
 
     return (
       <div
@@ -91,7 +91,7 @@ const NotificationList = ({ notifications = [], onMarkRead }) => {
             <p className="text-sm leading-5 text-ink">
               <Link
                 className="font-black transition-colors duration-150 hover:text-brand"
-                to={`/profile/${sender.username}`}
+                to={`/app/profile/${sender.username}`}
               >
                 @{sender.username || 'Unknown'}
               </Link>{' '}

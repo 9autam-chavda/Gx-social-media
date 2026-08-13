@@ -100,8 +100,30 @@ const getCurrentUser = async (userId) => {
   };
 };
 
+// TODO: Replace this direct password reset flow with verified email/OTP recovery
+// before production deployment.
+const resetPasswordByEmail = async ({ email, newPassword }) => {
+  const normalizedEmail = typeof email === 'string' ? email.trim().toLowerCase() : '';
+
+  if (!normalizedEmail || !/^\S+@\S+\.\S+$/.test(normalizedEmail)) {
+    throw new ApiError('Please provide a valid email address', 400);
+  }
+  if (typeof newPassword !== 'string' || newPassword.length < 6) {
+    throw new ApiError('Password must be at least 6 characters', 400);
+  }
+
+  const user = await User.findOne({ email: normalizedEmail }).select('+password');
+  if (!user) {
+    throw new ApiError('No account found with this email.', 404);
+  }
+
+  user.password = await hashPassword(newPassword);
+  await user.save();
+};
+
 module.exports = {
   registerUser,
   authenticateUser,
   getCurrentUser,
+  resetPasswordByEmail,
 };

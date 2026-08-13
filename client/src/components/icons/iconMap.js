@@ -14,6 +14,8 @@ import {
   LuCircleCheck,
   LuCompass,
   LuEllipsis,
+  LuEye,
+  LuEyeOff,
   LuHash,
   LuHeart,
   LuHistory,
@@ -100,6 +102,8 @@ export const icons = {
   bolt: LuZap,
   hashtag: LuHash,
   circle: LuCircle,
+  eye: LuEye,
+  eyeOff: LuEyeOff,
 };
 
 export const actionIcons = {
