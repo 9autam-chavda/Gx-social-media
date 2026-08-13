@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2 sm:gap-3">
           <div className="hidden min-w-0 text-right sm:block">
             <p className="truncate text-sm font-black leading-5 text-ink">@{user?.username}</p>
-            <p className="truncate text-xs font-semibold leading-4 text-ink-muted">Logged in</p>
+          <p className="truncate text-xs font-medium leading-4 text-ink-muted">Your account</p>
           </div>
           <NavLink className={actionClassName} to="/app/notifications" aria-label="Notifications">
             {({ isActive }) => (
@@ -45,7 +45,7 @@ const Navbar = () => {
             type="button"
           >
             <Icon name="logout" />
-            Logout
+            Log out
           </button>
         </div>
       </div>

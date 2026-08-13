@@ -57,7 +57,7 @@ const Sidebar = () => {
           type="button"
         >
           <Icon name="logout" />
-          Logout
+          Log out
         </button>
       </div>
     </aside>

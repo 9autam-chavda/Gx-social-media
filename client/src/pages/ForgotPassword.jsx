@@ -34,8 +34,8 @@ const ForgotPassword = () => {
     }
   };
 
-  return <AuthShell title={success ? 'Password updated' : 'Forgot your password?'} subtitle={success ? 'Your password has been updated. You can now log in with your new password.' : 'Enter your email and create a new password for your GX account.'} footerText="Remembered your password?" footerLink="/login" footerLabel="Back to login">
-    {success ? <Link className="primary-button w-full" to="/login">Back to login <Icon name="arrowRight" size={16} /></Link> : <form className="grid gap-4" onSubmit={handleSubmit}>
+  return <AuthShell title={success ? 'Password updated' : 'Reset your password'} subtitle={success ? 'Your password has been updated. You can now log in.' : 'Enter your email and choose a new password.'} footerText="Remembered your password?" footerLink="/login" footerLabel="Log in">
+    {success ? <Link className="primary-button w-full" to="/login">Log in <Icon name="arrowRight" size={16} /></Link> : <form className="grid gap-4" onSubmit={handleSubmit}>
       {error && <p className="app-alert" role="alert">{error}</p>}
       <label className="grid gap-2 text-sm font-bold text-ink">Email address
         <input className="form-field" type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="you@example.com" autoComplete="email" required />
@@ -46,7 +46,7 @@ const ForgotPassword = () => {
       <label className="grid gap-2 text-sm font-bold text-ink">Confirm new password
         <span className="relative"><input className="form-field pr-12" type={showConfirmation ? 'text' : 'password'} value={confirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} autoComplete="new-password" minLength="6" required /><button type="button" className="absolute inset-y-0 right-2 icon-button h-10 w-10" onClick={() => setShowConfirmation(!showConfirmation)} aria-label={showConfirmation ? 'Hide password confirmation' : 'Show password confirmation'}><Icon name={showConfirmation ? 'eyeOff' : 'eye'} /></button></span>
       </label>
-      <button className="primary-button mt-2 w-full" type="submit" disabled={submitting}>{submitting ? 'Resetting...' : 'Reset password'} <Icon name="arrowRight" size={16} /></button>
+      <button className="primary-button mt-2 w-full" type="submit" disabled={submitting}>{submitting ? 'Resetting…' : 'Reset password'} <Icon name="arrowRight" size={16} /></button>
     </form>}
   </AuthShell>;
 };

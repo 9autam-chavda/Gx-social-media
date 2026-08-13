@@ -43,10 +43,10 @@ const Register = () => {
   return (
     <AuthShell
       title="Create your account"
-      subtitle="Create a profile and start sharing with your community."
+      subtitle="Create a profile and start sharing."
       footerText="Already have an account?"
       footerLink="/login"
-      footerLabel="Login"
+      footerLabel="Log in"
     >
       <form className="grid gap-4" onSubmit={handleSubmit}>
         {error && (
@@ -98,7 +98,7 @@ const Register = () => {
         </label>
 
         <button className="primary-button mt-2 w-full" type="submit" disabled={submitting}>
-          {submitting ? 'Creating account...' : 'Register'}
+          {submitting ? 'Creating account…' : 'Create account'}
           <Icon name="arrowRight" className="ml-2" />
         </button>
       </form>

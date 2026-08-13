@@ -43,7 +43,7 @@ const Login = () => {
   return (
     <AuthShell
       title="Welcome back"
-      subtitle="Log in to pick up your feed where you left it."
+      subtitle="Log in to continue to your feed."
       footerText="New here?"
       footerLink="/register"
       footerLabel="Create an account"
@@ -81,10 +81,10 @@ const Login = () => {
               required
             />
         </label>
-        <Link className="-mt-1 text-right text-sm font-bold text-brand hover:text-blue-800" to="/forgot-password">Forgot password?</Link>
+        <Link className="-mt-1 text-right text-sm font-semibold text-brand hover:text-brand-strong" to="/forgot-password">Forgot password?</Link>
 
         <button className="primary-button mt-2 w-full" type="submit" disabled={submitting}>
-          {submitting ? 'Logging in...' : 'Login'}
+          {submitting ? 'Logging in…' : 'Log in'}
           <Icon name="arrowRight" className="ml-2" />
         </button>
       </form>
