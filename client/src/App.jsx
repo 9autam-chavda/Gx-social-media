@@ -18,8 +18,6 @@ const SavedPosts = lazy(() => import('./pages/SavedPosts'));
 const PostPage = lazy(() => import('./pages/PostPage'));
 const ChatPage = lazy(() => import('./pages/ChatPage'));
 const Landing = lazy(() => import('./pages/Landing'));
-const About = lazy(() => import('./pages/About'));
-const Features = lazy(() => import('./pages/Features'));
 const ForgotPassword = lazy(() => import('./pages/ForgotPassword'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
@@ -33,8 +31,6 @@ function App() {
           <Route element={<PublicRoute />}>
             <Route element={<PublicLayout />}>
               <Route path="/" element={<Landing />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/features" element={<Features />} />
             </Route>
           </Route>
           <Route element={<PublicRoute redirectAuthenticated />}>
@@ -59,6 +55,8 @@ function App() {
             </Route>
           </Route>
           <Route path="/feed" element={<Navigate to="/app/feed" replace />} />
+          <Route path="/about" element={<Navigate to="/#about" replace />} />
+          <Route path="/features" element={<Navigate to="/#features" replace />} />
           <Route path="/notifications" element={<Navigate to="/app/notifications" replace />} />
           <Route path="/profile/:username" element={<LegacyProfileRedirect />} />
           <Route path="/create-post" element={<Navigate to="/app/create-post" replace />} />
